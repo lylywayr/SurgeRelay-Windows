@@ -8,7 +8,6 @@ organizing, converting, editing, merging, and publishing Surge modules.
 This project is derived from:
 
 - Upstream macOS project: `EEliberto/SurgeRelay-macOS`
-- Fork used as migration source: `lylywayr/surgerelay-macos`
 
 The Windows version uses Electron and Node.js for the desktop shell and local
 runtime while retaining the Surge module management workflow and Script-Hub

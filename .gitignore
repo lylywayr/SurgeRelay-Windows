@@ -10,3 +10,7 @@ DerivedData/
 xcuserdata/
 *.xcuserstate
 .wrangler/
+.tools/
+node_modules/
+dist-windows/
+*.log

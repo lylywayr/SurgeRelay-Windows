@@ -1,0 +1,36 @@
+{
+  "name": "surgerelay-windows",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Windows desktop port of Surge Relay.",
+  "main": "windows-electron/src/main.js",
+  "scripts": {
+    "windows:dev": "electron .",
+    "windows:package": "electron-packager . \"Surge Relay\" --platform=win32 --arch=x64 --out=dist-windows --overwrite --no-asar --ignore=\"^/\\.tools($|/)\" --ignore=\"^/dist-windows($|/)\"",
+    "windows:pack": "electron-builder --win --dir",
+    "windows:dist": "electron-builder --win"
+  },
+  "devDependencies": {
+    "@electron/packager": "^20.0.1",
+    "electron": "^31.7.7",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.allenmiao.SurgeRelay.Windows",
+    "productName": "Surge Relay",
+    "directories": {
+      "output": "dist-windows"
+    },
+    "files": [
+      "windows-electron/**/*",
+      "windows-electron/web/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    }
+  }
+}

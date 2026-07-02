@@ -1,5 +1,7 @@
 # Surge Relay Windows
 
+[English](README.md) | [中文](README.zh-CN.md)
+
 Surge Relay Windows is a Windows desktop port of Surge Relay, a tool for
 organizing, converting, editing, merging, and publishing Surge modules.
 

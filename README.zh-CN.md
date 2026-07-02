@@ -32,8 +32,12 @@ Cloudflare 公共地址联动暂未包含。
 
 ## 下载
 
-带版本标签的 release 会由 GitHub Actions 自动构建。前往仓库 Releases 页面
-下载最新 Windows zip，解压后运行：
+带版本标签的 release 会由 GitHub Actions 自动构建。
+
+- 最新 Release 页面：<https://github.com/lylywayr/SurgeRelay-Windows/releases/latest>
+- 当前已打包 Windows zip：<https://github.com/lylywayr/SurgeRelay-Windows/releases/download/v0.1.0/SurgeRelay-Windows-v0.1.0-win32-x64.zip>
+
+下载 Windows zip，解压后运行：
 
 ```text
 Surge Relay.exe

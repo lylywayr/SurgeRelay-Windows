@@ -33,8 +33,12 @@ Cloudflare public URL integration is intentionally not included yet.
 
 ## Download
 
-Tagged releases are built by GitHub Actions. Download the latest Windows zip
-from the repository's Releases page, extract it, and run:
+Tagged releases are built by GitHub Actions.
+
+- Latest release page: <https://github.com/lylywayr/SurgeRelay-Windows/releases/latest>
+- Current packaged Windows zip: <https://github.com/lylywayr/SurgeRelay-Windows/releases/download/v0.1.0/SurgeRelay-Windows-v0.1.0-win32-x64.zip>
+
+Download the Windows zip, extract it, and run:
 
 ```text
 Surge Relay.exe

@@ -1,95 +1,91 @@
 # Surge Relay Windows
 
-[English](README.md) | [中文](README.zh-CN.md)
+[中文](README.md) | [English](README.en.md)
 
-Surge Relay Windows is a Windows desktop port of Surge Relay, a tool for
-organizing, converting, editing, merging, and publishing Surge modules.
+Surge Relay Windows 是 Surge Relay 的 Windows 桌面移植版，用于集中管理、
+转换、编辑、合并和发布 Surge 模块。
 
-This project is derived from:
+本项目派生自：
 
-- Upstream macOS project: `EEliberto/SurgeRelay-macOS`
+- 上游 macOS 项目：`EEliberto/SurgeRelay-macOS`
 
-The Windows version uses Electron and Node.js for the desktop shell and local
-runtime while retaining the Surge module management workflow and Script-Hub
-based conversion model.
+Windows 版使用 Electron 和 Node.js 实现桌面外壳与本地运行时，同时保留
+Surge 模块管理流程以及基于 Script-Hub 的本地转换模型。
 
-## Features
+## 功能
 
-- Windows desktop app with tray support.
-- Local Web UI for module management.
-- Add, edit, delete, enable, and disable source modules.
-- Convert Quantumult X rewrite and Loon plugin sources to Surge modules through
-  Script-Hub's local JavaScript engine.
-- Preserve native Surge `.sgmodule` sources.
-- Merge enabled modules into one combined Surge module.
-- Edit converted module content locally.
-- Configure module arguments.
-- Save combined module output to a local Windows folder.
-- Publish generated modules to a private GitHub repository.
-- Optional automatic module refresh.
-- Optional launch at Windows login.
+- Windows 桌面应用，支持托盘。
+- 本地 Web UI 管理模块。
+- 添加、编辑、删除、启用和停用来源模块。
+- 通过 Script-Hub 本地 JavaScript 引擎，将 Quantumult X rewrite 和 Loon plugin 来源转换为 Surge 模块。
+- 支持原生 Surge `.sgmodule` 来源。
+- 将启用的模块合并为一个总 Surge 模块。
+- 本地编辑转换后的模块内容。
+- 配置模块参数。
+- 将总模块保存到本地 Windows 文件夹。
+- 将生成的模块发布到私有 GitHub 仓库。
+- 可选定时自动刷新模块。
+- 可选 Windows 开机启动。
 
-Cloudflare public URL integration is intentionally not included yet.
+Cloudflare 公共地址联动暂未包含。
 
-## Download
+## 下载
 
-Tagged releases are built by GitHub Actions.
+带版本标签的 release 会由 GitHub Actions 自动构建。
 
-- Latest release page: <https://github.com/lylywayr/SurgeRelay-Windows/releases/latest>
-- Current packaged Windows zip: <https://github.com/lylywayr/SurgeRelay-Windows/releases/download/v0.1.0/SurgeRelay-Windows-v0.1.0-win32-x64.zip>
+- 最新 Release 页面：<https://github.com/lylywayr/SurgeRelay-Windows/releases/latest>
+- 当前已打包 Windows zip：<https://github.com/lylywayr/SurgeRelay-Windows/releases/download/v0.1.0/SurgeRelay-Windows-v0.1.0-win32-x64.zip>
 
-Download the Windows zip, extract it, and run:
+下载 Windows zip，解压后运行：
 
 ```text
 Surge Relay.exe
 ```
 
-## Development
+## 开发
 
-Install Node.js 20 or newer, then run:
+安装 Node.js 20 或更高版本，然后运行：
 
 ```powershell
 npm ci
 npm run windows:dev
 ```
 
-Create a local unpacked Windows build:
+创建本地未打包安装器的 Windows 构建：
 
 ```powershell
 npm run windows:package
 ```
 
-The output is written to:
+输出目录：
 
 ```text
 dist-windows/Surge Relay-win32-x64
 ```
 
-## Release
+## 发布
 
-Create and push a version tag:
+创建并推送版本标签：
 
 ```powershell
 git tag v0.1.0
 git push origin v0.1.0
 ```
 
-GitHub Actions will build a portable Windows zip and attach it to a GitHub
-Release.
+GitHub Actions 会构建 portable Windows zip，并自动附加到 GitHub Release。
 
-## GitHub Publishing Notes
+## GitHub 发布说明
 
-Surge Relay Windows only publishes to private GitHub repositories. This matches
-the upstream project's policy of avoiding public repositories as bulk module
-distribution targets.
+Surge Relay Windows 只允许发布到私有 GitHub 仓库。这与上游项目策略一致，
+用于避免公开仓库被批量滥用为模块分发目标。
 
-The GitHub token should have access to the target private repository. Fine
-grained tokens should include repository contents read/write permission.
+GitHub Token 需要能够访问目标私有仓库。细粒度 token 应包含 repository
+contents 读写权限。
 
-## License
+## 许可证
 
-This project is licensed under the Apache License 2.0.
+本项目使用 Apache License 2.0。
 
-Because this is a derivative work of the upstream Surge Relay macOS project,
-the original license and notices are retained. See [LICENSE](LICENSE) and
-[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+由于本项目是 Surge Relay macOS 上游项目的派生作品，原始许可证和声明会
+继续保留。参见 [LICENSE](LICENSE) 和
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
